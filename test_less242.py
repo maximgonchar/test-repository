@@ -12,7 +12,7 @@ link = 'http://suninjuly.github.io/explicit_wait2.html'
 #price = By.ID, 'price'
 
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def browser(multi_browser):
     multi_browser.get(link)
     yield multi_browser
